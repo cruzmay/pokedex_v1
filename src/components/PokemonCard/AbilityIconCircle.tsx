@@ -27,6 +27,8 @@ export const AbilityIconCircle = (props: AbilityIconCircleProps) => {
     switch (size) {
       case "medium":
         return { ...ICON_CIRCLE, height: 30, width: 30, fontSize: 18 };
+      case "large":
+        return { ...ICON_CIRCLE, height: 40, width: 40, fontSize: 22 };
       default:
         return { ...ICON_CIRCLE };
     }
@@ -34,7 +36,7 @@ export const AbilityIconCircle = (props: AbilityIconCircleProps) => {
 
   return (
     <Box sx={computedIconSize}>
-      <Icon fontSize={"inherit"}>{props.icon}</Icon>
+      <Icon fontSize={"inherit"}>{icon}</Icon>
     </Box>
   );
 };
