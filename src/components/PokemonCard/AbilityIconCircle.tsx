@@ -23,25 +23,45 @@ const ICON_CIRCLE: CSSProperties = {
 
 export const AbilityIconCircle = (props: AbilityIconCircleProps) => {
   const { icon, type, size } = props;
+  const computedIconType = useMemo(() => {
+    let styledType, iconType
+    switch (type) {
+      case "normal":
+        styledType = {
+          ...ICON_CIRCLE,
+          background: "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 28%, rgba(167,226,238,1) 100%)" ,
+        }
+        iconType = "adb"
+        return {styledType, iconType}
+      default: 
+      styledType = {
+          ...ICON_CIRCLE,
+        }
+        iconType = "electric_bolt"
+        return {styledType, iconType}
+
+    }
+  },[type])
+
   const computedIconSize = useMemo(() => {
     switch (size) {
       case "medium":
-        return { ...ICON_CIRCLE, height: 30, width: 30, fontSize: 18 };
+        return { height: 30, width: 30, fontSize: 18 };
       case "large":
-        return { ...ICON_CIRCLE, height: 40, width: 40, fontSize: 22 };
+        return { height: 40, width: 40, fontSize: 22 };
       default:
         return { ...ICON_CIRCLE };
     }
   }, [size]);
 
   return (
-    <Box sx={computedIconSize}>
-      <Icon fontSize={"inherit"}>{icon}</Icon>
+    <Box sx={{...computedIconType.styledType, ...computedIconSize }}>
+      <Icon fontSize={"inherit"}>{computedIconType.iconType}</Icon>
     </Box>
   );
 };
 
-AbilityIconCircle.defaultProps = {
-  icon: "electric_bolt",
-  type: "bold",
-};
+// AbilityIconCircle.defaultProps = {
+//   icon: "electric_bolt",
+//   type: "bold",
+// };

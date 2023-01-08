@@ -45,7 +45,7 @@ export const PokemonCardHeader = (props: PokemonCardHeaderProps) => {
           </Span>
           60
         </Typography>
-        <AbilityIconCircle size="medium" />
+        <AbilityIconCircle size="medium" type="normal" />
       </Grid>
     </>
   );
