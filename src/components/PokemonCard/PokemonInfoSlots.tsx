@@ -11,9 +11,9 @@ const CAP_CONTAINER: CSSProperties = {
 
 const BASIC_BOX: CSSProperties = {
   display: "flex",
-  height: 18,
+  height: 13,
   width: "auto",
-  padding: "3px 16px",
+  padding: "3px 10px",
   background: backgroundColor,
   justifyContent: "center",
   alignItems: "center",
@@ -21,7 +21,7 @@ const BASIC_BOX: CSSProperties = {
   borderTop: itemBorder,
   borderRadius: "10px 2px 10px 2px",
   boxShadow: "3px 2px 9px -4px rgba(0,0,0,0.81)",
-  // marginLeft: -2,
+  marginLeft: -2,
 };
 
 interface PokemonInfoSlotsProps {

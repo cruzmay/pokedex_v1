@@ -5,6 +5,7 @@ import { CSSProperties } from "react";
 import { PokemonInfoSlots } from "./PokemonInfoSlots";
 import { Span } from "../customComponents/Span";
 import { AbilityIconCircle } from "./AbilityIconCircle";
+import { PokemonCardHeader } from "./PokemonCardHeader";
 
 const cardHeight = 400;
 const cardWidth = 300;
@@ -32,34 +33,8 @@ export const PokemonCard = () => {
   return (
     <Card sx={CARD}>
       <CardActionArea sx={CARD_ACTION_AREA}>
-        <Grid sx={GRID_CONTAINER} padding={1} container xs={12}>
-          <Grid item xs={4}>
-            <PokemonInfoSlots>
-              <Typography
-                fontFamily={"Zen Dots"}
-                fontSize={14}
-                fontStyle="italic"
-                children="BASIC"
-              />
-            </PokemonInfoSlots>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography
-              variant="h6"
-              fontWeight={500}
-              paddingLeft={1}
-              marginTop={"-2px"}
-            >
-              Pikachu
-            </Typography>
-          </Grid>
-          <Grid item xs={4} justifyContent="end" display="flex">
-            <Typography variant="body1" marginTop={"3px"}>
-              <Span theme={theme}>hp</Span>
-              60
-            </Typography>
-            <AbilityIconCircle />
-          </Grid>
+        <Grid sx={GRID_CONTAINER} padding={"5px"} container xs={12}>
+          <PokemonCardHeader theme={theme} />
         </Grid>
       </CardActionArea>
     </Card>
