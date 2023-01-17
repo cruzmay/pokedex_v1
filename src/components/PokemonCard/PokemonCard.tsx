@@ -1,10 +1,6 @@
 import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import { CardActionArea, Grid, styled, Theme, useTheme } from "@mui/material";
+import { CardActionArea, Grid, useTheme } from "@mui/material";
 import { CSSProperties } from "react";
-import { PokemonInfoSlots } from "./PokemonInfoSlots";
-import { Span } from "../customComponents/Span";
-import { AbilityIconCircle } from "./AbilityIconCircle";
 import { PokemonCardHeader } from "./PokemonCardHeader";
 
 const cardHeight = 400;

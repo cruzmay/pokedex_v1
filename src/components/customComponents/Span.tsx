@@ -1,5 +1,4 @@
 import { Theme } from "@mui/material";
-import { Typography, Variant } from "@mui/material/styles/createTypography";
 import { styled } from "@mui/system";
 
 interface SpanProps {
@@ -52,8 +51,3 @@ export const Span = styled("span")<SpanProps>(
     marginBottom,
   })
 );
-
-// Span.defaultProps = {
-//   fontSize: 14,
-//   fontWeight: 700,
-// };

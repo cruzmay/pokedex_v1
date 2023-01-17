@@ -1,4 +1,4 @@
-import { Badge, IconButton, Menu, MenuItem } from "@mui/material";
+import { Badge, IconButton } from "@mui/material";
 import { Box } from "@mui/system";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";

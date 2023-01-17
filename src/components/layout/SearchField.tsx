@@ -1,16 +1,10 @@
 import styled from "@emotion/styled";
 import { alpha, InputBase, Theme } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import { SyntheticEvent } from "react";
 import React from "react";
 
 interface SearchFieldProps {
   theme: Theme;
-}
-
-interface HandleInputField {
-  event: React.SyntheticEvent;
-  value: string;
 }
 
 const Search = styled("div")<SearchFieldProps>(({ theme }) => ({

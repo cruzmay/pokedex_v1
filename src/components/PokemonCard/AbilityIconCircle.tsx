@@ -21,18 +21,25 @@ const ICON_CIRCLE: CSSProperties = {
   borderRadius: 50,
 };
 
+const normalColor = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 28%, rgba(167,226,238,1) 100%)";
+const fireColor = ""
+
+const returnedStyledIcon = ( bgColor: string, iconName: string) => {
+  const styledType = {
+    ...ICON_CIRCLE,
+    background: bgColor ,
+  }
+  const iconType = iconName
+  return {styledType, iconType}
+}
+
 export const AbilityIconCircle = (props: AbilityIconCircleProps) => {
-  const { icon, type, size } = props;
+  const { type, size } = props;
   const computedIconType = useMemo(() => {
     let styledType, iconType
     switch (type) {
       case "normal":
-        styledType = {
-          ...ICON_CIRCLE,
-          background: "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 28%, rgba(167,226,238,1) 100%)" ,
-        }
-        iconType = "adb"
-        return {styledType, iconType}
+        return returnedStyledIcon( normalColor, "adb")
       default: 
       styledType = {
           ...ICON_CIRCLE,
@@ -60,8 +67,3 @@ export const AbilityIconCircle = (props: AbilityIconCircleProps) => {
     </Box>
   );
 };
-
-// AbilityIconCircle.defaultProps = {
-//   icon: "electric_bolt",
-//   type: "bold",
-// };
